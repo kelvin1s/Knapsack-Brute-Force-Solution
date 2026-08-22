@@ -8,6 +8,7 @@ The project has 2 Java files and 5 testing files. The item class is a blueprint 
 ## How to run
 The 'src' folder contains the Java files. Use the 'knapsack.java' file to run the program. The user will be prompted to enter a number from 1-5, indicating the test files that can be ran. Each test file follows the following format:
 
+```
 Item 1 OR item name, value, weight
 Item 2 OR item name, value, weight
 Item 3 OR item name, value, weight
@@ -15,7 +16,7 @@ Item 3 OR item name, value, weight
 .
 .
 Capacity of the knapsack
-
+```
 
 There are 5 test files:
 
