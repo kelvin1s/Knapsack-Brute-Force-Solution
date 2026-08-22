@@ -1,0 +1,6 @@
+Orange,5,5
+Apple,6,5
+Banana,8,5
+Mango,10,5
+Peach,7,5
+15
