@@ -1,4 +1,4 @@
-#Knapsack Brute Force Solution
+# Knapsack Brute Force Solution
 
 ## Description
 This is a brute force solution to the Knapsack 0-1 problem, using recursion and implemented in Java as part of a university assignment. The Knapsack problem is an optimisation issue where the objective is to calculate for a set of items, each of specific values and weights, and for a knapsack of specific capacity, what items can fit inside the knapsack.
@@ -6,6 +6,17 @@ This is a brute force solution to the Knapsack 0-1 problem, using recursion and 
 The project has 2 Java files and 5 testing files. The item class is a blueprint for an individual item, storing the name, value and weight of an item. The knapsack class stores the primary methods, including methods that read information from the test files as well as the brute force recursion method. In the main method, a knapsack object is created and the files are tested by calling the other methods. The 5 testing files can be tested by inputting their respective test number when prompted after running the knapsack file.
 
 ## How to run
+The 'src' folder contains the Java files. Use the 'knapsack.java' file to run the program. The user will be prompted to enter a number from 1-5, indicating the test files that can be ran. Each test file follows the following format:
+
+Item 1 OR item name, value, weight
+Item 2 OR item name, value, weight
+Item 3 OR item name, value, weight
+.
+.
+.
+Capacity of the knapsack
+
+
 There are 5 test files:
 
 Test1.txt
