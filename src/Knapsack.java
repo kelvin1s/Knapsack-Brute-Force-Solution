@@ -93,43 +93,71 @@ public class Knapsack {
             return capacity;
         }
         
+        public String readFile(String filename) throws FileNotFoundException {  // method that will read the contents of the test file so that it can be printed to the terminal
+
+            File readFileText = new File(filename);
+            Scanner fileScan = new Scanner(readFileText);
+            String text = "";
+
+            while(fileScan.hasNextLine()) {
+                text += fileScan.nextLine() + "\n";
+            }
+
+            fileScan.close();
+            return text;
+        }
+
         public static void main(String[] args) throws Exception {
             
         Knapsack ks = new Knapsack();   // creating new knapsack object
         Scanner sc = new Scanner(System.in);    // scanner to read user input for which test they would like to see
-        System.out.println("Enter test file number (1-5):");
+        System.out.println("Each test file follows the below format:\n\n" +
+                        "Item 1 OR item name, value, weight\n" + 
+                        "Item 2 OR item name, value, weight\n" + 
+                        "Item 3 OR item name, value, weight\n" + 
+                        ".\n" + 
+                        ".\n" + 
+                        ".\n" +
+                        "Capacity of the knapsack\n\n" +
+                        "Enter test file number (1-5) to test the corresponding file:");
         String output = sc.next();
         sc.close();
         
         int testNumber = Integer.parseInt(output);
+        String fileInfo = ""; 
         Item[] items = null;
         double capacity = 0;
 
         switch(testNumber) {    // switch statement where cases are executed based on the test number the user inputted
             case 1:
+                fileInfo = ks.readFile("test1.txt");
                 items = ks.readItems("test1.txt");   
                 capacity = ks.readCapacity("test1.txt");
-                System.out.println("Test 1:\nKnapsack capacity: " + capacity + "\nItems in the knapsack:");
+                System.out.println("Test 1:\n\n" + fileInfo + "\nKnapsack capacity: " + capacity + "\nItems in the knapsack:\n");
                 break;
             case 2:
+                fileInfo = ks.readFile("test2.txt");
                 items = ks.readItems("test2.txt");    
                 capacity = ks.readCapacity("test2.txt");
-                System.out.println("Test 2:\nKnapsack capacity: " + capacity + "\nItems in the knapsack:");
+                System.out.println("Test 2:\n\n" + fileInfo + "\nKnapsack capacity: " + capacity + "\nItems in the knapsack:\n");
                 break;
             case 3:
+                fileInfo = ks.readFile("test3.txt");
                 items = ks.readItems("test3.txt");
                 capacity = ks.readCapacity("test3.txt");
-                System.out.println("Test 3:\nKnapsack capacity: " + capacity + "\nItems in the knapsack:");
+                System.out.println("Test 3:\n\n" + fileInfo + "\nKnapsack capacity: " + capacity + "\nItems in the knapsack:\n");
                 break;
             case 4:
+                fileInfo = ks.readFile("test4.txt");
                 items = ks.readItems("test4.txt");
                 capacity = ks.readCapacity("test4.txt");
-                System.out.println("Test 4:\nKnapsack capacity: " + capacity + "\nItems in the knapsack:");
+                System.out.println("Test 4:\n\n" + fileInfo + "\nKnapsack capacity: " + capacity + "\nItems in the knapsack:\n");
                 break;
             case 5:
+                fileInfo = ks.readFile("test5.txt");
                 items = ks.readItems("test5.txt");
                 capacity = ks.readCapacity("test5.txt");
-                System.out.println("Test 5:\nKnapsack capacity: " + capacity + "\nItems in the knapsack:");
+                System.out.println("Test 5:\n\n" + fileInfo + "\nKnapsack capacity: " + capacity + "\nItems in the knapsack:\n");
                 break;
         }
 
@@ -142,7 +170,7 @@ public class Knapsack {
             System.out.println(storedItems.get(i).getName() + " (Value: " + storedItems.get(i).getValue() + ", Weight: " + storedItems.get(i).getWeight() + ")");   // loop that goes through the array to print the information about the items
             totalWeight += storedItems.get(i).getWeight();  // tallying up the weight of each item in the knapsack
         }   
-        System.out.println("Number of items in the knapsack: " + storedItems.size());   // displaying knapsack information
+        System.out.println("\nNumber of items in the knapsack: " + storedItems.size());   // displaying knapsack information
         System.out.println("Total Weight: " + totalWeight);
         System.out.println("Maximum Value: " + maxValue + '\n');
 
