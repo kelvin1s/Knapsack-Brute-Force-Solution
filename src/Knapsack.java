@@ -111,7 +111,7 @@ public class Knapsack {
             
         Knapsack ks = new Knapsack();   // creating new knapsack object
         Scanner sc = new Scanner(System.in);    // scanner to read user input for which test they would like to see
-        System.out.println("Each test file follows the below format:\n\n" +
+        System.out.println("\nEach test file follows the below format:\n\n" +
                         "Item 1 OR item name, value, weight\n" + 
                         "Item 2 OR item name, value, weight\n" + 
                         "Item 3 OR item name, value, weight\n" + 
@@ -130,33 +130,33 @@ public class Knapsack {
 
         switch(testNumber) {    // switch statement where cases are executed based on the test number the user inputted
             case 1:
-                fileInfo = ks.readFile("test1.txt");
-                items = ks.readItems("test1.txt");   
-                capacity = ks.readCapacity("test1.txt");
+                fileInfo = ks.readFile("tests/test1.txt");
+                items = ks.readItems("tests/test1.txt");   
+                capacity = ks.readCapacity("tests/test1.txt");
                 System.out.println("Test 1:\n\n" + fileInfo + "\nKnapsack capacity: " + capacity + "\nItems in the knapsack:\n");
                 break;
             case 2:
-                fileInfo = ks.readFile("test2.txt");
-                items = ks.readItems("test2.txt");    
-                capacity = ks.readCapacity("test2.txt");
+                fileInfo = ks.readFile("tests/test2.txt");
+                items = ks.readItems("tests/test2.txt");    
+                capacity = ks.readCapacity("tests/test2.txt");
                 System.out.println("Test 2:\n\n" + fileInfo + "\nKnapsack capacity: " + capacity + "\nItems in the knapsack:\n");
                 break;
             case 3:
-                fileInfo = ks.readFile("test3.txt");
-                items = ks.readItems("test3.txt");
-                capacity = ks.readCapacity("test3.txt");
+                fileInfo = ks.readFile("tests/test3.txt");
+                items = ks.readItems("tests/test3.txt");
+                capacity = ks.readCapacity("tests/test3.txt");
                 System.out.println("Test 3:\n\n" + fileInfo + "\nKnapsack capacity: " + capacity + "\nItems in the knapsack:\n");
                 break;
             case 4:
-                fileInfo = ks.readFile("test4.txt");
-                items = ks.readItems("test4.txt");
-                capacity = ks.readCapacity("test4.txt");
+                fileInfo = ks.readFile("tests/test4.txt");
+                items = ks.readItems("tests/test4.txt");
+                capacity = ks.readCapacity("tests/test4.txt");
                 System.out.println("Test 4:\n\n" + fileInfo + "\nKnapsack capacity: " + capacity + "\nItems in the knapsack:\n");
                 break;
             case 5:
-                fileInfo = ks.readFile("test5.txt");
-                items = ks.readItems("test5.txt");
-                capacity = ks.readCapacity("test5.txt");
+                fileInfo = ks.readFile("tests/test5.txt");
+                items = ks.readItems("tests/test5.txt");
+                capacity = ks.readCapacity("tests/test5.txt");
                 System.out.println("Test 5:\n\n" + fileInfo + "\nKnapsack capacity: " + capacity + "\nItems in the knapsack:\n");
                 break;
         }
